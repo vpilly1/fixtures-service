@@ -28,7 +28,6 @@ public class AddFixtureSteps {
 
     @When("I make post API call to fixtures service with below details")
     public void iMakePostAPICallToFixturesService(DataTable datatable) {
-       // datatable.row();
         List<List<String>> rows = datatable.asLists(String.class);
         HashMap<String, String> hashMap = new HashMap<>();
         for (List<String> columns : rows) {
