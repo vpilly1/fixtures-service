@@ -1,6 +1,5 @@
 package apitests.stepdefinitions;
 
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,18 +16,17 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class AddFixtureSteps {
+public class UpdateFixtureSteps {
     private String baseURI;
     private Response response;
 
-    @Given("the add fixtures endpoint exists")
-    public void theAddFixturesEndpointExists() {
+    @Given("the update fixture endpoint exists")
+    public void theUpdateFixtureEndpointExists() {
         baseURI = "http://localhost:3000/fixture";
     }
 
-    @When("I make post API call to fixtures service with below details")
-    public void iMakePostAPICallToFixturesService(DataTable datatable) {
-       // datatable.row();
+    @When("I make put API call to fixtures service with below details")
+    public void iMakeGetAPICallToFixturesService(DataTable datatable) {
         List<List<String>> rows = datatable.asLists(String.class);
         HashMap<String, String> hashMap = new HashMap<>();
         for (List<String> columns : rows) {
@@ -37,19 +35,20 @@ public class AddFixtureSteps {
         response = given()
                 .contentType(ContentType.JSON)
                 .body(hashMap)
-                .post(baseURI)
+                .put(baseURI)
                 .then().extract().response();
     }
 
-    @And("the add response should have all fixtures {int}")
-    public void theAddResponseShouldHaveAllFixtures(int noOfFixtures) {
+    @And("the update response should have updated fixture {int}")
+    public void theUpdateResponseShouldHaveUpdatedFixture(int noOfFixtures) {
         ArrayList<String> list = response.jsonPath().get("fixtureId");
         assertThat(list.size(), is(noOfFixtures));
     }
 
-    @Then("add response code should be {int}")
-    public void addResponseCodeShouldBe(int code) {
+    @Then("update response code should be {int}")
+    public void updateResponseCodeShouldBe(int code) {
         assertThat(code, is(200));
     }
 }
+
 
