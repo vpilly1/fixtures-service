@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-01-26T01:14:25.730Z",
+        "start_timestamp": "2021-01-26T01:34:37.813Z",
         "line": 3,
         "name": "Verifying if API is returning all fixtures",
         "description": "",
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1091000000,
+              "duration": 1052000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 2000000,
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 6,
@@ -85,11 +85,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-01-26T01:14:27.123Z",
+        "start_timestamp": "2021-01-26T01:34:39.165Z",
         "line": 3,
         "name": "Verifying if API is able to add a fixtures",
         "description": "",
-        "id": "verifying-adding-a-fixures;verifying-if-api-is-able-to-add-a-fixtures",
+        "id": "verifying-adding-a-fixtures;verifying-if-api-is-able-to-add-a-fixtures",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 242000000,
+              "duration": 250000000,
               "status": "passed"
             },
             "line": 5,
@@ -126,7 +126,7 @@
           },
           {
             "result": {
-              "duration": 5002000000,
+              "duration": 5015000000,
               "status": "passed"
             },
             "line": 7,
@@ -144,7 +144,7 @@
           },
           {
             "result": {
-              "duration": 19000000,
+              "duration": 29000000,
               "status": "passed"
             },
             "line": 8,
@@ -163,9 +163,9 @@
         ]
       }
     ],
-    "name": "Verifying adding a fixures",
+    "name": "Verifying adding a fixtures",
     "description": "",
-    "id": "verifying-adding-a-fixures",
+    "id": "verifying-adding-a-fixtures",
     "keyword": "Feature",
     "uri": "file:src/test/resources/cucumber.features/fixtures/PostFixture.feature",
     "tags": []
@@ -174,7 +174,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-01-26T01:14:32.390Z",
+        "start_timestamp": "2021-01-26T01:34:44.463Z",
         "line": 3,
         "name": "Verifying if API is deleting a fixture",
         "description": "",
@@ -184,6 +184,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 4,
@@ -195,7 +196,7 @@
           },
           {
             "result": {
-              "duration": 13000000,
+              "duration": 9000000,
               "status": "passed"
             },
             "line": 5,
@@ -230,7 +231,7 @@
           },
           {
             "result": {
-              "duration": 16000000,
+              "duration": 15000000,
               "status": "passed"
             },
             "line": 7,

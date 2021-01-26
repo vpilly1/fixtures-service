@@ -1,4 +1,4 @@
-Feature: Verifying adding a fixures
+Feature: Verifying adding a fixtures
 
   Scenario: Verifying if API is able to add a fixtures
     Given the add fixtures endpoint exists
