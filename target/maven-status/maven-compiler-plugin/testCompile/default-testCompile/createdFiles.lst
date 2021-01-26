@@ -1,1 +1,5 @@
-org\example\AppTest.class
+apitests\stepdefinitions\RemoveFixturesSteps.class
+apitests\stepdefinitions\UpdateFixtureSteps.class
+apitests\stepdefinitions\ExecuteAllScenarioTest.class
+apitests\stepdefinitions\GetFixturesSteps.class
+apitests\stepdefinitions\PostFixtureSteps.class

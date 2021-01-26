@@ -4,5 +4,5 @@ Feature: Verifying retrieving all fixures
     Given the fixtures endpoint exists
     When I make get API call to fixtures service
     Then response code should be 200
-    And the response should have all fixtures 4
+    And the response should have all fixtures 3
 

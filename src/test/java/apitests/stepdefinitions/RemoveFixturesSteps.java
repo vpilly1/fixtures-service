@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class DeleteFixturesSteps {
+public class RemoveFixturesSteps {
     private String baseURI;
     private Response response;
 
@@ -24,21 +24,25 @@ public class DeleteFixturesSteps {
 
     @When("I make Delete API call to fixtures service {int}")
     public void iMakeDeleteAPICallToFixturesService(int fixtureId) {
+        baseURI = baseURI+"/"+fixtureId;
         response = given()
                 .contentType(ContentType.JSON)
-                .body(fixtureId)
                 .delete(baseURI)
                 .then().extract().response();
     }
 
     @And("the delete response should have one less fixture {int}")
     public void theDeleteResponseShouldHaveOneLessFixture(int noOfFixtures) {
+        response = given()
+                .contentType(ContentType.JSON)
+                .get("http://localhost:3000/fixtures")
+                .then().extract().response();
         ArrayList<String> list = response.jsonPath().get("fixtureId");
         assertThat(list.size(), is(noOfFixtures));
     }
 
     @Then("delete response code should be {int}")
     public void deleteresponseCodeShouldBe(int code) {
-        assertThat(code, is(200));
+        assertThat(response.getStatusCode(), is(code));
     }
 }

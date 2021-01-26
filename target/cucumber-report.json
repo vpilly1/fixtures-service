@@ -3,95 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-01-25T10:26:11.669Z",
-        "line": 3,
-        "name": "Verifying if API is deleting a fixture",
-        "description": "",
-        "id": "verifying-deleting-a-fixure;verifying-if-api-is-deleting-a-fixture",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "the fixture delete endpoint exists",
-            "match": {
-              "location": "apitests.stepdefinitions.DeleteFixturesSteps.theFixtureDeleteEndpointExists()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1228000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I make Delete API call to fixtures service 4",
-            "match": {
-              "arguments": [
-                {
-                  "val": "4",
-                  "offset": 43
-                }
-              ],
-              "location": "apitests.stepdefinitions.DeleteFixturesSteps.iMakeDeleteAPICallToFixturesService(int)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1000000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "delete response code should be 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 31
-                }
-              ],
-              "location": "apitests.stepdefinitions.DeleteFixturesSteps.deleteresponseCodeShouldBe(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:930)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat apitests.stepdefinitions.DeleteFixturesSteps.theDeleteResponseShouldHaveOneLessFixture(DeleteFixturesSteps.java:36)\r\n\tat ✽.the delete response should have one less fixture 2(file:///C:/Users/vinay.pilly/IdeaProjects/fixtures-service/src/test/resources/cucumber.features/fixtures/DeleteFixture.feature:7)\r\nCaused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading \u0027\u003c\u0027, no possible valid JSON value or punctuation could be recognized.\r\n\tat groovy.json.JsonLexer.nextToken(JsonLexer.java:83)\r\n\tat groovy.json.JsonLexer$nextToken.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)\r\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:893)\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:928)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat apitests.stepdefinitions.DeleteFixturesSteps.theDeleteResponseShouldHaveOneLessFixture(DeleteFixturesSteps.java:36)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:44)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:64)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:63)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:99)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:198)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:233)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)\r\n",
-              "duration": 46000000,
-              "status": "failed"
-            },
-            "line": 7,
-            "name": "the delete response should have one less fixture 2",
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 49
-                }
-              ],
-              "location": "apitests.stepdefinitions.DeleteFixturesSteps.theDeleteResponseShouldHaveOneLessFixture(int)"
-            },
-            "keyword": "And "
-          }
-        ]
-      }
-    ],
-    "name": "Verifying deleting a fixure",
-    "description": "",
-    "id": "verifying-deleting-a-fixure",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/cucumber.features/fixtures/DeleteFixture.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2021-01-25T10:26:13.027Z",
+        "start_timestamp": "2021-01-26T01:14:25.730Z",
         "line": 3,
         "name": "Verifying if API is returning all fixtures",
         "description": "",
@@ -101,6 +13,7 @@
         "steps": [
           {
             "result": {
+              "duration": 2000000,
               "status": "passed"
             },
             "line": 4,
@@ -112,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 20000000,
+              "duration": 1091000000,
               "status": "passed"
             },
             "line": 5,
@@ -124,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 2000000,
               "status": "passed"
             },
             "line": 6,
@@ -142,15 +55,15 @@
           },
           {
             "result": {
-              "duration": 223000000,
+              "duration": 234000000,
               "status": "passed"
             },
             "line": 7,
-            "name": "the response should have all fixtures 4",
+            "name": "the response should have all fixtures 3",
             "match": {
               "arguments": [
                 {
-                  "val": "4",
+                  "val": "3",
                   "offset": 38
                 }
               ],
@@ -166,6 +79,181 @@
     "id": "verifying-retrieving-all-fixures",
     "keyword": "Feature",
     "uri": "file:src/test/resources/cucumber.features/fixtures/GetFixtures.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-26T01:14:27.123Z",
+        "line": 3,
+        "name": "Verifying if API is able to add a fixtures",
+        "description": "",
+        "id": "verifying-adding-a-fixures;verifying-if-api-is-able-to-add-a-fixtures",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the add fixtures endpoint exists",
+            "match": {
+              "location": "apitests.stepdefinitions.PostFixtureSteps.theAddFixturesEndpointExists()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 242000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I make post API call to fixtures service with below details",
+            "match": {
+              "location": "apitests.stepdefinitions.PostFixtureSteps.iMakePostAPICallToFixturesService(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "fixtureId",
+                  "4"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5002000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "add response code should be 202",
+            "match": {
+              "arguments": [
+                {
+                  "val": "202",
+                  "offset": 28
+                }
+              ],
+              "location": "apitests.stepdefinitions.PostFixtureSteps.addResponseCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the add response should have all fixtures 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 42
+                }
+              ],
+              "location": "apitests.stepdefinitions.PostFixtureSteps.theAddResponseShouldHaveAllFixtures(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verifying adding a fixures",
+    "description": "",
+    "id": "verifying-adding-a-fixures",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/cucumber.features/fixtures/PostFixture.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-26T01:14:32.390Z",
+        "line": 3,
+        "name": "Verifying if API is deleting a fixture",
+        "description": "",
+        "id": "verifying-deleting-a-fixture;verifying-if-api-is-deleting-a-fixture",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the fixture delete endpoint exists",
+            "match": {
+              "location": "apitests.stepdefinitions.RemoveFixturesSteps.theFixtureDeleteEndpointExists()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I make Delete API call to fixtures service 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 43
+                }
+              ],
+              "location": "apitests.stepdefinitions.RemoveFixturesSteps.iMakeDeleteAPICallToFixturesService(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "delete response code should be 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 31
+                }
+              ],
+              "location": "apitests.stepdefinitions.RemoveFixturesSteps.deleteresponseCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the delete response should have one less fixture 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 49
+                }
+              ],
+              "location": "apitests.stepdefinitions.RemoveFixturesSteps.theDeleteResponseShouldHaveOneLessFixture(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Verifying deleting a fixture",
+    "description": "",
+    "id": "verifying-deleting-a-fixture",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/cucumber.features/fixtures/RemoveFixture.feature",
     "tags": []
   }
 ]

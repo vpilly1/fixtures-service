@@ -1,3 +1,4 @@
+@wip
 Feature: Verifying updating a fixures
 
   Scenario: Verifying if API is able to update a fixtures

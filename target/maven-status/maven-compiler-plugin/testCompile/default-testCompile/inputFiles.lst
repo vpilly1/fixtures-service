@@ -1,1 +1,5 @@
-C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\org\example\AppTest.java
+C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\apitests\stepdefinitions\RemoveFixturesSteps.java
+C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\apitests\stepdefinitions\UpdateFixtureSteps.java
+C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\apitests\stepdefinitions\PostFixtureSteps.java
+C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\apitests\runner\ExecuteAllScenarioTest.java
+C:\Users\vinay.pilly\IdeaProjects\fixtures-service\src\test\java\apitests\stepdefinitions\GetFixturesSteps.java

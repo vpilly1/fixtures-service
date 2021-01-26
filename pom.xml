@@ -14,7 +14,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <selenium.java.version>4.0.0-alpha-6</selenium.java.version>
     <cucumber.version>6.2.2</cucumber.version>
-    <cucumber.testclass.name>ExecuteWipOnlyScenarioIT.java</cucumber.testclass.name>
+    <cucumber.testclass.name>ExecuteAllScenarioTest.java</cucumber.testclass.name>
   </properties>
 
   <dependencies>
@@ -69,6 +69,13 @@
       <artifactId>junit-jupiter</artifactId>
       <version>RELEASE</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
     </dependency>
 
   </dependencies>

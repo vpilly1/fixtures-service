@@ -39,6 +39,6 @@ public class GetFixturesSteps {
 
     @Then("response code should be {int}")
     public void responseCodeShouldBe(int code) {
-        assertThat(code, is(200));
+        assertThat(response.getStatusCode(), is(code));
     }
 }
